@@ -1,3 +1,13 @@
+import sys
+import os
+
+try:
+    import cv2
+    print("cv2 OK:", cv2.__version__)
+except Exception as e:
+    print("cv2 FULL ERROR:", repr(e))
+    import traceback
+    traceback.print_exc()
 import streamlit as st
 from deepface import DeepFace
 from PIL import Image, ImageOps, ImageDraw, ImageFont
